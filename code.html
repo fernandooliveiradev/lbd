@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Landing Page Eventos - Método Voxe (Variant) - Refined</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6", 
+              secondary: "#8B5CF6", 
+              dark: "#0B1120", // Deeper, richer dark
+              darker: "#020617", 
+              surface: "#1E293B", 
+              text: "#F1F5F9", 
+              muted: "#94A3B8",
+              accent: "#6366F1", 
+            },
+            fontFamily: {
+              display: ["Montserrat", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'hero-glow': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
+            boxShadow: {
+              'glow-blue': '0 0 20px -5px rgba(59, 130, 246, 0.3)',
+              'glow-purple': '0 0 20px -5px rgba(139, 92, 246, 0.3)',
+            }
+          },
+        },
+      };
+    </script>
+<style>body {
+    background-color: #020617;
+    color: #F1F5F9;
+    overflow-x: hidden
+    }
+.glass-panel {
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    }
+.glass-nav {
+    background: rgba(2, 6, 23, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+    }
+.gradient-text {
+    background: linear-gradient(135deg, #93C5FD 0%, #C4B5FD 50%, #F9A8D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+    }
+.hero-gradient {
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.1) 0%, rgba(2, 6, 23, 0) 60%)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }.noise-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD4ARM2DI28MaygAZHe3dKWXHVQO1EDZkWsIBg3TJzwpwQT1z7roxVpHdoxBMIYYuV1KX4fGdH8zgmnQ4ndFEsu_LMk2MSuTE7DP5N7NhW98IPmL7RFAoUdyb00YLQE1G5do-DaoKSRdfkIQohtPBwPjEgUPw2rIUJb3ihy9I893oO1KUCKqvgpxtaMp-qVfpsYeaeCACr1V_HFG3MViQrTfyIRGBrut4tzIz8ZOu_sO_n3H6zZmokE9vPdSx5dlF6VaIWU7gKJyjBK);
+    pointer-events: none;
+    z-index: 0
+    }</style>
+</head>
+<body class="font-body antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+<div class="relative z-50 bg-gradient-to-r from-blue-950 via-darker to-purple-950 text-white py-2.5 text-center text-[10px] sm:text-xs font-semibold tracking-widest uppercase border-b border-white/5 shadow-sm">
+<span class="opacity-80">Exclusivo para membros e convidados Método Voxe</span>
+</div>
+<nav class="fixed w-full z-40 glass-nav transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+<div class="p-1.5 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+<span class="material-symbols-outlined text-blue-500 text-2xl">hub</span>
+</div>
+<span class="font-display font-bold text-lg tracking-tight text-white group-hover:text-blue-100 transition-colors">MÉTODO VOXE</span>
+</div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#sobre">O Método</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#agenda">Agenda 2024</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#mentores">Mentores</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#depoimentos">Depoimentos</a>
+<a class="relative inline-flex items-center justify-center p-0.5 mb-0 overflow-hidden text-sm font-medium rounded-full group bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 focus:ring-4 focus:outline-none focus:ring-blue-800 shadow-lg shadow-purple-900/20 hover:shadow-purple-700/30 transition-all" href="#agenda">
+<span class="relative px-6 py-2 transition-all ease-in duration-75 bg-darker/50 rounded-full group-hover:bg-opacity-0">
+                        Ver Próximos Eventos
+                    </span>
+</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-slate-300 hover:text-white p-2" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Audience at a large conference event" class="w-full h-full object-cover opacity-10 mix-blend-overlay grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASRlG7buuTvkUG7sjOzV6o4VyqAQDEET5VkjN3wXQcHHUQFW1h63LijUD_8oygM_brkDFdcB5vmsX9lJd0u0VCRxSw0g2gn40nlRK5GWlVEYQMgwYNWArHUzluPr_DRWl72zJmY1d65_oRLtGNQkagkgz5CgHNEUEpieOEJw3alUcZy2Ftua8sW6UmliMthRNeuw2crcaDhezuB07J6xb_AH3Wr9PpfVM6fVwS8-tYQtDcKOukhnr2yA3wCcNIrhZKGm8i3uZxzyy"/>
+<div class="absolute inset-0 bg-gradient-to-b from-darker via-darker/90 to-darker"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="noise-bg"></div>
+</div>
+<div class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-blue-950/30 border border-blue-500/20 text-blue-300 text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:border-blue-500/40 transition-colors cursor-default">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+            Calendário Oficial 2024
+        </div>
+<h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight">
+            A Agenda Completa dos <br class="hidden lg:block"/>
+<span class="gradient-text drop-shadow-sm">Eventos Presenciais</span> de <br class="hidden lg:block"/>
+            Vendas e Tráfego
+        </h1>
+<p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            Domine as estratégias que moldam o mercado. De Fevereiro a Outubro, imersões práticas focadas em organização, autoridade e visão de longo prazo.
+        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-5 w-full sm:w-auto">
+<a class="group bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl text-base font-bold transition-all transform hover:-translate-y-1 shadow-glow-blue flex items-center justify-center gap-2 border border-blue-500 ring-4 ring-blue-600/10" href="#agenda">
+                Ver Próximos Eventos 
+                <span class="material-symbols-outlined text-sm group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
+</a>
+<a class="group bg-white/5 hover:bg-white/10 text-white border border-white/10 backdrop-blur-md px-8 py-4 rounded-xl text-base font-semibold transition-all hover:border-white/20 flex items-center justify-center" href="#sobre">
+                Entenda o Método
+                <span class="material-symbols-outlined text-sm ml-2 opacity-50 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<section class="py-24 bg-darker border-y border-white/5 relative overflow-hidden" id="sobre">
+<div class="noise-bg"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-display text-3xl font-bold text-white sm:text-4xl tracking-tight">O Que é o Método Voxe?</h2>
+<div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full opacity-70"></div>
+<p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Não é apenas sobre vender mais. É sobre construir uma estrutura sólida que perpetue resultados. Nossa metodologia baseia-se em três pilares fundamentais.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+<div class="glass-panel p-8 rounded-2xl hover:bg-surface/50 transition-all duration-500 group relative overflow-hidden hover:border-blue-500/30">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+<div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-lg flex items-center justify-center mb-6 border border-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-blue-400 text-2xl group-hover:text-blue-300 transition-colors">architecture</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-4">Organização Estratégica</h3>
+<p class="text-slate-400 leading-relaxed text-sm group-hover:text-slate-300 transition-colors">
+                    Processos definidos e gestão eficiente para que sua operação de vendas funcione como um relógio, sem depender exclusivamente do dono.
+                </p>
+</div>
+<div class="glass-panel p-8 rounded-2xl hover:bg-surface/50 transition-all duration-500 group relative overflow-hidden hover:border-purple-500/30">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
+<div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-lg flex items-center justify-center mb-6 border border-purple-500/20 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-purple-400 text-2xl group-hover:text-purple-300 transition-colors">verified</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-4">Autoridade de Marca</h3>
+<p class="text-slate-400 leading-relaxed text-sm group-hover:text-slate-300 transition-colors">
+                    Posicionamento de alto valor no mercado digital. Transforme sua loja ou serviço em uma referência incontestável no seu nicho.
+                </p>
+</div>
+<div class="glass-panel p-8 rounded-2xl hover:bg-surface/50 transition-all duration-500 group relative overflow-hidden hover:border-indigo-500/30">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all duration-500"></div>
+<div class="w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/10 rounded-lg flex items-center justify-center mb-6 border border-indigo-500/20 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-indigo-400 text-2xl group-hover:text-indigo-300 transition-colors">visibility</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-4">Visão de Longo Prazo</h3>
+<p class="text-slate-400 leading-relaxed text-sm group-hover:text-slate-300 transition-colors">
+                    Planejamento sustentável para crescer ano após ano, focando em LTV (Lifetime Value) e retenção de clientes, não apenas aquisição.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#0B1120] relative overflow-hidden" id="agenda">
+<div class="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-40 -mb-40 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+<div>
+<h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">Agenda de Eventos 2024</h2>
+<p class="mt-3 text-lg text-slate-400 font-light">Escolha sua imersão e prepare-se para transformar seu negócio.</p>
+</div>
+<div class="flex gap-3">
+<span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-500/5 text-blue-300 border border-blue-500/20 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 mr-2 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span> Vendas
+                </span>
+<span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-purple-500/5 text-purple-300 border border-purple-500/20 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 mr-2 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.8)]"></span> Tráfego
+                </span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="group relative bg-surface/30 rounded-xl overflow-hidden border border-white/5 hover:border-blue-500/30 hover:bg-surface/50 transition-all duration-300 flex flex-col md:flex-row">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-700 opacity-60 group-hover:opacity-100 transition-opacity"></div>
+<div class="md:w-56 bg-black/20 flex flex-col items-center justify-center py-8 md:py-0 border-b md:border-b-0 md:border-r border-white/5 relative">
+<div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-xs font-bold text-blue-400 uppercase tracking-widest relative z-10">Fevereiro</span>
+<span class="text-5xl font-display font-bold text-white mt-1 relative z-10 tracking-tight">15-16</span>
+<span class="text-[10px] uppercase font-semibold text-slate-500 mt-2 relative z-10 tracking-wider">São Paulo, SP</span>
+</div>
+<div class="flex-1 p-8 flex flex-col justify-center relative">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-bold bg-blue-500/10 text-blue-300 uppercase tracking-wide border border-blue-500/10">Vendas &amp; Gestão</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">Voxe Sales Immersion</h3>
+<p class="text-slate-400 mb-6 text-sm leading-relaxed max-w-2xl">Para donos de lojas físicas que desejam implementar processos de vendas previsíveis e treinar equipes de alta performance.</p>
+<div class="flex flex-wrap items-center text-xs font-medium text-slate-500 gap-6">
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">groups</span> 150 Vagas</span>
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">schedule</span> 09h às 19h</span>
+</div>
+</div>
+<div class="md:w-52 p-6 flex items-center justify-center bg-black/10 border-t md:border-t-0 md:border-l border-white/5">
+<a class="w-full text-center px-4 py-3 border border-blue-500/30 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold hover:border-transparent hover:shadow-lg hover:shadow-blue-900/30" href="#">Ver Detalhes</a>
+</div>
+</div>
+<div class="group relative bg-surface/30 rounded-xl overflow-hidden border border-white/5 hover:border-purple-500/30 hover:bg-surface/50 transition-all duration-300 flex flex-col md:flex-row">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-purple-700 opacity-60 group-hover:opacity-100 transition-opacity"></div>
+<div class="md:w-56 bg-black/20 flex flex-col items-center justify-center py-8 md:py-0 border-b md:border-b-0 md:border-r border-white/5 relative">
+<div class="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-xs font-bold text-purple-400 uppercase tracking-widest relative z-10">Maio</span>
+<span class="text-5xl font-display font-bold text-white mt-1 relative z-10 tracking-tight">22-23</span>
+<span class="text-[10px] uppercase font-semibold text-slate-500 mt-2 relative z-10 tracking-wider">São Paulo, SP</span>
+</div>
+<div class="flex-1 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-bold bg-purple-500/10 text-purple-300 uppercase tracking-wide border border-purple-500/10">Tráfego Pago</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Ads Performance Summit</h3>
+<p class="text-slate-400 mb-6 text-sm leading-relaxed max-w-2xl">Masterclass técnica para gestores e donos de e-commerce focada em otimização de campanhas e escala de orçamento.</p>
+<div class="flex flex-wrap items-center text-xs font-medium text-slate-500 gap-6">
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">groups</span> 100 Vagas</span>
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">schedule</span> 09h às 20h</span>
+</div>
+</div>
+<div class="md:w-52 p-6 flex items-center justify-center bg-black/10 border-t md:border-t-0 md:border-l border-white/5">
+<a class="w-full text-center px-4 py-3 border border-purple-500/30 text-purple-400 hover:bg-purple-600 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold hover:border-transparent hover:shadow-lg hover:shadow-purple-900/30" href="#">Ver Detalhes</a>
+</div>
+</div>
+<div class="group relative bg-surface/30 rounded-xl overflow-hidden border border-white/5 hover:border-indigo-500/30 hover:bg-surface/50 transition-all duration-300 flex flex-col md:flex-row opacity-90 hover:opacity-100">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-indigo-700 opacity-60 group-hover:opacity-100 transition-opacity"></div>
+<div class="md:w-56 bg-black/20 flex flex-col items-center justify-center py-8 md:py-0 border-b md:border-b-0 md:border-r border-white/5 relative">
+<div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-xs font-bold text-indigo-400 uppercase tracking-widest relative z-10">Agosto</span>
+<span class="text-5xl font-display font-bold text-white mt-1 relative z-10 tracking-tight">10-11</span>
+<span class="text-[10px] uppercase font-semibold text-slate-500 mt-2 relative z-10 tracking-wider">Rio de Janeiro, RJ</span>
+</div>
+<div class="flex-1 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-300 uppercase tracking-wide border border-indigo-500/10">Liderança</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">Voxe Leadership Experience</h3>
+<p class="text-slate-400 mb-6 text-sm leading-relaxed max-w-2xl">Imersão exclusiva para fundadores. Foco em cultura organizacional, contratação de C-Level e expansão de franquias.</p>
+<div class="flex flex-wrap items-center text-xs font-medium text-slate-500 gap-6">
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">groups</span> 50 Vagas (VIP)</span>
+<span class="flex items-center gap-1.5 text-slate-400"><span class="material-symbols-outlined text-[18px]">schedule</span> 10h às 22h</span>
+</div>
+</div>
+<div class="md:w-52 p-6 flex items-center justify-center bg-black/10 border-t md:border-t-0 md:border-l border-white/5">
+<a class="w-full text-center px-4 py-3 border border-indigo-500/30 text-indigo-400 hover:bg-indigo-600 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold hover:border-transparent hover:shadow-lg hover:shadow-indigo-900/30" href="#">Lista de Espera</a>
+</div>
+</div>
+<div class="group relative bg-surface/10 rounded-xl overflow-hidden border border-white/5 transition-all duration-300 flex flex-col md:flex-row opacity-60 hover:opacity-90 grayscale hover:grayscale-0">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-white/20"></div>
+<div class="md:w-56 bg-black/20 flex flex-col items-center justify-center py-8 md:py-0 border-b md:border-b-0 md:border-r border-white/5">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Outubro</span>
+<span class="text-5xl font-display font-bold text-white mt-1 tracking-tight">05-06</span>
+<span class="text-[10px] uppercase font-semibold text-slate-600 mt-2 tracking-wider">São Paulo, SP</span>
+</div>
+<div class="flex-1 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-bold bg-white/5 text-slate-400 uppercase tracking-wide border border-white/10">Encerramento</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white mb-3">Voxe Annual Conference</h3>
+<p class="text-slate-500 mb-6 text-sm leading-relaxed max-w-2xl">O maior evento do ano. Networking com todos os alunos, palestras magnas e premiação dos melhores resultados.</p>
+<div class="flex flex-wrap items-center text-xs font-medium text-slate-600 gap-6">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">groups</span> 500 Vagas</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">schedule</span> 2 Dias</span>
+</div>
+</div>
+<div class="md:w-52 p-6 flex items-center justify-center bg-black/10 border-t md:border-t-0 md:border-l border-white/5">
+<span class="text-sm font-medium text-slate-500 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span> Em Breve
+                    </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-darker border-y border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative group">
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-2xl -z-10 blur-xl opacity-60"></div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-tl from-blue-600/30 to-purple-600/30 rounded-2xl -z-10 blur-xl opacity-60"></div>
+<div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+<img alt="Networking at event" class="w-full h-[550px] object-cover filter brightness-75 group-hover:brightness-95 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbBomrvXQ7ufaoe9aSMupLmOZKT0_TE8vv_gxaeO-gGO5jUbimmHg5030zMWLj6uABCX_2QxJtKWJJWazUGI173xwQxB2OZYcNFc685vBQanYTASNDMTX6uFpnj6ufDHA0P4xrzYlK8PzcxG3E3gmv1lYC9nbpZOPGPeO7mVY-FL4qHezt3BKsnDcU1sZDQiMOw8orTJBk2vDGnqP2Je40kAvExTBpLabK0CVHwqDTLXskqhM73aZ20_kaYE3OY1tGjjpHaASUau_c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6 sm:right-auto bg-surface/90 backdrop-blur-md p-5 rounded-xl border border-white/10 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+<div class="flex items-center gap-4 mb-2">
+<div class="flex -space-x-3">
+<img alt="User" class="w-9 h-9 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjx_lkyRbiFnOFV80o0nHVXx6Ws0-xqxIvMPy-0xwGwAdblZLFlQqJsqIqi7CtYDjYEWJeo5SpS8PwUmB9G3VkZgUQFka16P_4Xv8cCE_91DkRZnJBMyEWLs3TISitEnpeKW6y3uHOI-eLrsfSPU9thOsJnPXbjgCpRAATKkRxT9yRtTUJtHabBbdzU485Ga2BZI60ZWgfuKc3YCtja-I4fC04xst0GgSSEaWUNX3kzJXrjb-iBVpWm7xfHkzRz1cz5F11uxoGXKEW"/>
+<img alt="User" class="w-9 h-9 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLiRmLO6lRuMc-2cbE3L98fp0SPnJm9AUe1rtyZvknFSMlkQ6FK86NNNzuyEmtVk6YCJXpAvQ-LS9bs_Cl6ml01UoEfDZEPNzbB65XTi8EyT24xVVRHsV2M5NVJIkynRzJS6I2DJ9Pftx-P2mpOp4wi4qa5lCGSyR9V0Bj2yiEdOIDfeOl0ouc6mbQt51xRI9q5D5RmKFC5oCrjycRdS_ostvNqY6_yWobRWOCjt7E7_9boY8Al0H377QuaGs4g-zzXSDVVaM-a6G"/>
+<img alt="User" class="w-9 h-9 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH0XNygzDdX--aVpgfihOsGZLrU8kEBOOfoxhdYAmNb101QP0ClJs7vxIF_W0rwr4JeTYHCqCJK9wnGWIy3mcv1lJ3ToPhjeQ-wNWV400CnQlRMhnG4QyzGazbxBncsYEZtaYSXGYEChsOm9sb8B7-LK29QgvGnfXD-Cz256z2WgQJPgVqdHBltk8ObRUoBHklWG0OAhsD15q1DU8FYGr5qndArgYnTSjDZl96juAtLeua9KTYcox7CsWUFHGzi0MDxvrgfjiAhnf"/>
+</div>
+<div>
+<span class="block text-xs font-bold text-blue-400 uppercase tracking-wider">+500 Alunos formados</span>
+<span class="block text-[10px] text-slate-500">Comunidade ativa</span>
+</div>
+</div>
+<p class="text-xs text-slate-300 italic">"O networking no presencial vale mais que qualquer MBA."</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-blue-500 font-bold tracking-widest uppercase text-xs mb-4 block">A Experiência</span>
+<h2 class="font-display text-3xl font-bold text-white sm:text-4xl mb-6 leading-tight">Por que participar de um <br/><span class="text-blue-500">evento presencial</span>?</h2>
+<p class="text-lg text-slate-400 mb-10 leading-relaxed font-light">
+                    O digital ensina, mas o presencial transforma. Sair da rotina operacional e imergir em um ambiente de alta performance é o catalisador que seu negócio precisa.
+                </p>
+<div class="space-y-8">
+<div class="flex group">
+<div class="flex-shrink-0 mt-1">
+<div class="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 group-hover:bg-blue-500/20 group-hover:scale-110 transition duration-300">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">Networking de Alto Nível</h4>
+<p class="mt-2 text-slate-400 text-sm leading-relaxed">Conecte-se com outros donos de negócio que enfrentam os mesmos desafios e já superaram barreiras que você enfrenta hoje.</p>
+</div>
+</div>
+<div class="flex group">
+<div class="flex-shrink-0 mt-1">
+<div class="flex items-center justify-center h-12 w-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 group-hover:bg-purple-500/20 group-hover:scale-110 transition duration-300">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">Imersão Focada</h4>
+<p class="mt-2 text-slate-400 text-sm leading-relaxed">Sem distrações. 100% do seu tempo dedicado a absorver estratégias, tirar dúvidas e desenhar planos de ação.</p>
+</div>
+</div>
+<div class="flex group">
+<div class="flex-shrink-0 mt-1">
+<div class="flex items-center justify-center h-12 w-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 group-hover:bg-indigo-500/20 group-hover:scale-110 transition duration-300">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+</div>
+<div class="ml-6">
+<h4 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Conteúdo Prático (Hands-on)</h4>
+<p class="mt-2 text-slate-400 text-sm leading-relaxed">Menos teoria, mais prática. Saia com playbooks prontos para implementar na segunda-feira seguinte.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-dark relative" id="mentores">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-display text-3xl font-bold text-white sm:text-4xl tracking-tight">Quem Guiará Você?</h2>
+<p class="mt-4 text-lg text-slate-400 font-light">A experiência combinada de décadas em varejo, marketing e gestão.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden rounded-2xl bg-surface shadow-lg border border-white/5 hover:border-blue-500/30 transition-all duration-300">
+<div class="aspect-w-3 aspect-h-4 relative h-[420px]">
+<img alt="Rafael Torres" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700 filter grayscale contrast-125 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Kh8_2z16zx5FkTmKTu9FSixHY85HbxEhWluihuU6zyHP1NR6e1x_cfch3r0SoQHNJT2gA5Unh8J0sg4u4plGOI8VJrZtd0r6mvkcXvMNJ3mJaJOwIdRQHywrANszhkz3XDvvGvl-poy2S3qI4sBtHjrbJGC83l2SgNyajTiQd1ohcJpCWsKYBQlnAFnBCZRt06N0MqVXb7-Vg71CVF2XQHGp3uQiGETSI7l2vCMwRz6eehs2XMaa46Bqx8p2XodGyfppfqzcNOxf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/40 to-transparent opacity-90 transition-opacity group-hover:opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<div class="border-l-2 border-blue-500 pl-4 mb-3 transition-all duration-300 group-hover:border-blue-400">
+<h3 class="text-2xl font-display font-bold text-white">Rafael Torres</h3>
+<p class="text-blue-400 font-medium text-xs uppercase tracking-widest mt-1">Estrategista Digital</p>
+</div>
+<div class="h-0 overflow-hidden group-hover:h-20 transition-all duration-500 ease-out">
+<p class="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                Especialista em vendas online, ajudou diversas lojas a saírem do físico e faturarem múltiplos 6 dígitos no digital.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-surface shadow-lg border border-white/5 hover:border-purple-500/30 transition-all duration-300">
+<div class="aspect-w-3 aspect-h-4 relative h-[420px]">
+<img alt="Lucas Mendes" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700 filter grayscale contrast-125 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDIKIGzoivMzneUs9zYWIIcKlarU5hznxp10gv9Lzw99kwxgLorzncf3YXoVroB4Uemo_ZKqdJe9Xfx2rf1-YgRH8U2rvpYwQAeCES9gOIqdSaNwqnHTSkxfno5cWeDT4A_XdnGEZTV60rVEx-rFbSHpOMzQbpVR8JroC4W8zXEVVIihARs8XJRunw-dojMi9KlCadtJJdb6ta6TnvzdOSN0jSPv6ezNgCwPh4vdYQIa-nel5LrPLIkDCZZKSKiYyCTHwVAIMn5vom"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/40 to-transparent opacity-90 transition-opacity group-hover:opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<div class="border-l-2 border-purple-500 pl-4 mb-3 transition-all duration-300 group-hover:border-purple-400">
+<h3 class="text-2xl font-display font-bold text-white">Lucas Mendes</h3>
+<p class="text-purple-400 font-medium text-xs uppercase tracking-widest mt-1">Gestor de Tráfego</p>
+</div>
+<div class="h-0 overflow-hidden group-hover:h-20 transition-all duration-500 ease-out">
+<p class="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                Gerenciou mais de R$10 milhões em ads. Mestre em otimização de ROI e escala agressiva para e-commerce.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-surface shadow-lg border border-white/5 hover:border-indigo-500/30 transition-all duration-300">
+<div class="aspect-w-3 aspect-h-4 relative h-[420px]">
+<img alt="Valéria Santos" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700 filter grayscale contrast-125 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKEJicyOFWRnXOoWWPe25hfDCEmoEYyjMIzbTNGOWZBSaIgfRw89peGBbfsvfoj6xYm4NCNPsKzOSxqrkYsXercye8Hj6PbCRA4gFnyqsin2i2hLwvYEr7HkPYQWuHYwk_lZ4ZIW4O2Euc4tQ-Jgkh_P_uN2WEoUkuH8yxMugA6KF--9m4FkLfunw4Ft60bKUbEgSxshD2uh6R28OuW1ipGrhbJRs_kTfNM_t2F95h64mdQdra_9Lzb8HJLSmRGapeiJq3-cG9XXm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/40 to-transparent opacity-90 transition-opacity group-hover:opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<div class="border-l-2 border-indigo-500 pl-4 mb-3 transition-all duration-300 group-hover:border-indigo-400">
+<h3 class="text-2xl font-display font-bold text-white">Valéria Santos</h3>
+<p class="text-indigo-400 font-medium text-xs uppercase tracking-widest mt-1">Consultora de Gestão</p>
+</div>
+<div class="h-0 overflow-hidden group-hover:h-20 transition-all duration-500 ease-out">
+<p class="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                Focada em processos e liderança. Ajuda empreendedores a organizarem a casa para crescer sem caos.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-darker overflow-hidden" id="depoimentos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display text-3xl font-bold text-white text-center mb-16 tracking-tight">O Impacto nos Negócios</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+<div class="relative group rounded-xl overflow-hidden border border-white/5 shadow-lg bg-surface">
+<img alt="Event photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd4S1OQVNwhR1pAYETSsXZMomwiwHpNQRyI_9tMdkqAj-NCajfrgkKaZoAHXLOJEKtaiDCr4SQDRa9fe6_JKVIGCXj5e117N9unuQnbQN3Tsw9ybKRK3yM6TC8ngF4tW--gvtPwYQmcrRvZRYbTHWuL2xORZVibqUTWEzxEAI38j0CJ47Vq3Dm5Iop6XzB-WWCtJeViKJ2-SKrxX7ofLmf0wVzFEBZ9j5y3SVjrOxzPhb78iBje_g4TTjPE09plulwoQwaBj8QT5si"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="material-symbols-outlined text-blue-500 text-3xl mb-2 opacity-80">format_quote</span>
+<p class="text-white font-medium text-sm leading-snug">"Dobrei meu faturamento em 3 meses pós-evento."</p>
+</div>
+</div>
+<div class="relative group rounded-xl overflow-hidden lg:col-span-2 border border-white/5 shadow-lg bg-surface">
+<img alt="Event photo wide" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbL7k8lQ9hxkxv3QWOUo7gCp36HIjVZm0a22dpL7jaFzdVICo-7odivK92mD707AAlTc0GOH5CwSFlHREK81A3od6AtWvUcfR_arCxFKcEe93j6PWcpcrsiETymNmI3QAxJ-rvfUYNcT4S_D86ciosGfWdEQ3SEr0CeSh7u66TwdRI0TNMXsmpmBzi8kLJgf0Omsf0FSnZzw2ZChIAKzRDmuOQ6Aea85K8IZo3gKSrFeWKlWozgWn4UfwQrOqGnX3W2WcMF7AnSgI4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+<span class="text-xs font-bold text-purple-300 uppercase">Networking</span>
+</div>
+<p class="text-white font-medium text-lg">"A melhor estrutura de networking do Brasil."</p>
+</div>
+</div>
+<div class="relative group rounded-xl overflow-hidden border border-white/5 shadow-lg bg-surface">
+<img alt="Event photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe2FmUF_ZNvqwLPx3rXoDENlHGqJoRinJaY-5sltikjqc4VlEnSlHOzrH1CuyqvwKwcmOzZD74ePl8Aq8sVTPoDBulSgtZ-yHoAV5qyjk30UFuf_yoBtoAUsZ-3YTpZvV4Rk2PaSmAh5J-nlxyOFJUm7e1_zSAQz9Sk85igwwu0YL8m5UwLOmv55_4hLvaRhrzwM7Ok0kadW2uWSgwWZ2vh9vFJpt8HZ_9h5E662G7to8IJfhbVsMMoJJKbkHzQmefZa_xHDFSf4Q9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="material-symbols-outlined text-indigo-500 text-3xl mb-2 opacity-80">verified</span>
+<p class="text-white font-medium text-sm leading-snug">"Conteúdo 100% aplicável."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-28 bg-[#020617] relative border-t border-white/5">
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617]"></div>
+<div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+<span class="text-blue-500 font-bold tracking-[0.2em] uppercase text-xs mb-6 block animate-pulse">Não deixe para depois</span>
+<h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight leading-tight">
+            O Próximo Passo do Seu Negócio <br/> <span class="gradient-text">Começa Aqui.</span>
+</h2>
+<p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            As vagas para os eventos presenciais são limitadas para garantir a qualidade do networking e da imersão. Garanta sua presença.
+        </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<a class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-10 py-5 rounded-xl text-lg font-bold shadow-[0_0_30px_rgba(124,58,237,0.3)] transition-all transform hover:-translate-y-1 border border-white/10 ring-1 ring-white/10" href="#agenda">
+                Escolha seu Evento e Inscreva-se
+            </a>
+<a class="w-full sm:w-auto text-slate-300 hover:text-white font-medium px-8 py-5 flex items-center justify-center gap-2 transition-all hover:bg-white/5 rounded-xl border border-transparent hover:border-white/5" href="#">
+<span class="material-symbols-outlined">chat</span> Falar com Consultor
+            </a>
+</div>
+<p class="mt-8 text-xs text-slate-500 flex items-center justify-center gap-4 opacity-70">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Pagamento seguro</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified_user</span> Garantia de 7 dias</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">workspace_premium</span> Certificado incluso</span>
+</p>
+</div>
+</section>
+<footer class="bg-darker text-slate-400 py-12 border-t border-white/5 relative z-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="p-1.5 rounded bg-blue-500/10">
+<span class="material-symbols-outlined text-blue-500 text-xl">hub</span>
+</div>
+<span class="font-display font-bold text-lg text-white tracking-tight">MÉTODO VOXE</span>
+</div>
+<div class="text-sm text-center md:text-right">
+<div class="flex gap-6 justify-center md:justify-end mb-3">
+<a class="hover:text-blue-400 transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-blue-400 transition-colors" href="#">Privacidade</a>
+<a class="hover:text-blue-400 transition-colors" href="#">Contato</a>
+</div>
+<p class="text-slate-600 text-xs">© 2024 Método Voxe. Todos os direitos reservados.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
